@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "e:\\Projects\\Udemy\\DatingApp\\API\\API.csproj": {}
+    "E:\\Projects\\Udemy\\DatingApp\\API\\API.csproj": {}
   },
   "projects": {
-    "e:\\Projects\\Udemy\\DatingApp\\API\\API.csproj": {
+    "E:\\Projects\\Udemy\\DatingApp\\API\\API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "e:\\Projects\\Udemy\\DatingApp\\API\\API.csproj",
+        "projectUniqueName": "E:\\Projects\\Udemy\\DatingApp\\API\\API.csproj",
         "projectName": "API",
-        "projectPath": "e:\\Projects\\Udemy\\DatingApp\\API\\API.csproj",
+        "projectPath": "E:\\Projects\\Udemy\\DatingApp\\API\\API.csproj",
         "packagesPath": "C:\\Users\\dutta\\.nuget\\packages\\",
-        "outputPath": "e:\\Projects\\Udemy\\DatingApp\\API\\obj\\",
+        "outputPath": "E:\\Projects\\Udemy\\DatingApp\\API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -26,7 +26,8 @@
           "net7.0"
         ],
         "sources": {
-          "https://api.nuget.org/v3/index.json": {}
+          "E:\\Projects\\packages": {},
+          "https://www.nuget.org/api/v2/": {}
         },
         "frameworks": {
           "net7.0": {
@@ -45,6 +46,8 @@
           "targetAlias": "net7.0",
           "dependencies": {
             "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
               "target": "Package",
               "version": "[7.0.5, )"
             },
