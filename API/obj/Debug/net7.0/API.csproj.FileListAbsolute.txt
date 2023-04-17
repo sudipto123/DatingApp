@@ -61,3 +61,8 @@ E:\Projects\Udemy\DatingApp\API\bin\Debug\net7.0\Humanizer.dll
 E:\Projects\Udemy\DatingApp\API\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Design.dll
 E:\Projects\Udemy\DatingApp\API\bin\Debug\net7.0\Mono.TextTemplating.dll
 E:\Projects\Udemy\DatingApp\API\bin\Debug\net7.0\System.CodeDom.dll
+E:\Projects\Udemy\DatingApp\API\bin\Debug\net7.0\Microsoft.IdentityModel.Abstractions.dll
+E:\Projects\Udemy\DatingApp\API\bin\Debug\net7.0\Microsoft.IdentityModel.JsonWebTokens.dll
+E:\Projects\Udemy\DatingApp\API\bin\Debug\net7.0\Microsoft.IdentityModel.Logging.dll
+E:\Projects\Udemy\DatingApp\API\bin\Debug\net7.0\Microsoft.IdentityModel.Tokens.dll
+E:\Projects\Udemy\DatingApp\API\bin\Debug\net7.0\System.IdentityModel.Tokens.Jwt.dll
