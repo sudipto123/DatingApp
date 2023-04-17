@@ -66,3 +66,6 @@ E:\Projects\Udemy\DatingApp\API\bin\Debug\net7.0\Microsoft.IdentityModel.JsonWeb
 E:\Projects\Udemy\DatingApp\API\bin\Debug\net7.0\Microsoft.IdentityModel.Logging.dll
 E:\Projects\Udemy\DatingApp\API\bin\Debug\net7.0\Microsoft.IdentityModel.Tokens.dll
 E:\Projects\Udemy\DatingApp\API\bin\Debug\net7.0\System.IdentityModel.Tokens.Jwt.dll
+E:\Projects\Udemy\DatingApp\API\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+E:\Projects\Udemy\DatingApp\API\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.dll
+E:\Projects\Udemy\DatingApp\API\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
