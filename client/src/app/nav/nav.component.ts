@@ -10,7 +10,6 @@ import { ToastrService } from 'ngx-toastr';
 })
 export class NavComponent implements OnInit {
   model: any = {};
-  //userName: string = "";
 
   constructor(public accountService: AccountService, private router: Router, private toastr: ToastrService) { }
 
@@ -19,12 +18,7 @@ export class NavComponent implements OnInit {
 
   login(){
     this.accountService.login(this.model).subscribe({
-      next: () => {
-        this.router.navigateByUrl('/members');
-        console.log(this.model);
-        //this.userName = this.model.username;
-      },
-      error: error => this.toastr.error(error.error)
+      next: () => this.router.navigateByUrl('/members')
     })
   }
 
