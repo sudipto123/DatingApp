@@ -15,6 +15,8 @@ E:\Projects\Udemy\DatingApp\API\bin\Debug\net7.0\API.deps.json
 E:\Projects\Udemy\DatingApp\API\bin\Debug\net7.0\API.runtimeconfig.json
 E:\Projects\Udemy\DatingApp\API\bin\Debug\net7.0\API.dll
 E:\Projects\Udemy\DatingApp\API\bin\Debug\net7.0\API.pdb
+E:\Projects\Udemy\DatingApp\API\bin\Debug\net7.0\AutoMapper.dll
+E:\Projects\Udemy\DatingApp\API\bin\Debug\net7.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 E:\Projects\Udemy\DatingApp\API\bin\Debug\net7.0\Humanizer.dll
 E:\Projects\Udemy\DatingApp\API\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 E:\Projects\Udemy\DatingApp\API\bin\Debug\net7.0\Microsoft.Data.Sqlite.dll
@@ -70,5 +72,3 @@ E:\Projects\Udemy\DatingApp\API\obj\Debug\net7.0\scopedcss\bundle\API.styles.css
 E:\Projects\Udemy\DatingApp\API\obj\Debug\net7.0\API.csproj.CopyComplete
 E:\Projects\Udemy\DatingApp\API\obj\Debug\net7.0\API.genruntimeconfig.cache
 E:\Projects\Udemy\DatingApp\API\obj\Debug\net7.0\ref\API.dll
-E:\Projects\Udemy\DatingApp\API\bin\Debug\net7.0\AutoMapper.dll
-E:\Projects\Udemy\DatingApp\API\bin\Debug\net7.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
