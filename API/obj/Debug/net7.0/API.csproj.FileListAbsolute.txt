@@ -17,6 +17,7 @@ E:\Projects\Udemy\DatingApp\API\bin\Debug\net7.0\API.dll
 E:\Projects\Udemy\DatingApp\API\bin\Debug\net7.0\API.pdb
 E:\Projects\Udemy\DatingApp\API\bin\Debug\net7.0\AutoMapper.dll
 E:\Projects\Udemy\DatingApp\API\bin\Debug\net7.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+E:\Projects\Udemy\DatingApp\API\bin\Debug\net7.0\CloudinaryDotNet.dll
 E:\Projects\Udemy\DatingApp\API\bin\Debug\net7.0\Humanizer.dll
 E:\Projects\Udemy\DatingApp\API\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 E:\Projects\Udemy\DatingApp\API\bin\Debug\net7.0\Microsoft.Data.Sqlite.dll
@@ -33,6 +34,7 @@ E:\Projects\Udemy\DatingApp\API\bin\Debug\net7.0\Microsoft.IdentityModel.Protoco
 E:\Projects\Udemy\DatingApp\API\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 E:\Projects\Udemy\DatingApp\API\bin\Debug\net7.0\Microsoft.IdentityModel.Tokens.dll
 E:\Projects\Udemy\DatingApp\API\bin\Debug\net7.0\Mono.TextTemplating.dll
+E:\Projects\Udemy\DatingApp\API\bin\Debug\net7.0\Newtonsoft.Json.dll
 E:\Projects\Udemy\DatingApp\API\bin\Debug\net7.0\SQLitePCLRaw.batteries_v2.dll
 E:\Projects\Udemy\DatingApp\API\bin\Debug\net7.0\SQLitePCLRaw.core.dll
 E:\Projects\Udemy\DatingApp\API\bin\Debug\net7.0\SQLitePCLRaw.provider.e_sqlite3.dll
@@ -72,5 +74,3 @@ E:\Projects\Udemy\DatingApp\API\obj\Debug\net7.0\scopedcss\bundle\API.styles.css
 E:\Projects\Udemy\DatingApp\API\obj\Debug\net7.0\API.csproj.CopyComplete
 E:\Projects\Udemy\DatingApp\API\obj\Debug\net7.0\API.genruntimeconfig.cache
 E:\Projects\Udemy\DatingApp\API\obj\Debug\net7.0\ref\API.dll
-E:\Projects\Udemy\DatingApp\API\bin\Debug\net7.0\CloudinaryDotNet.dll
-E:\Projects\Udemy\DatingApp\API\bin\Debug\net7.0\Newtonsoft.Json.dll
