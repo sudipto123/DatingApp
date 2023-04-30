@@ -1,54 +1,16 @@
 <form [formGroup]="registerForm" (ngSubmit)="register()" autocomplete="off">
     <h2 class="text-center text-primary">Sign Up</h2>
     <hr>
-    <div class="mb-3">
-        <input type="text"
-            [class.is-invalid]="registerForm.get('username')?.errors && registerForm.get('username')?.touched"
-            class="form-control"
-            formControlName="username"
-            placeholder="Uesrname"
-        >
-        <div class="invalid-feedback">
-            Please Enter a User Name
-        </div>
-    </div>
-    <div class="mb-3">
-        <input type="password"
-            [class.is-invalid]="registerForm.get('password')?.errors && registerForm.get('password')?.touched"
-            class="form-control"
-            formControlName="password"
-            placeholder="Password"            
-        >
-        <div class="invalid-feedback" *ngIf="registerForm.get('password')?.hasError('required')">
-            Please Enter a Password
-        </div>
-        <div class="invalid-feedback" *ngIf="registerForm.get('password')?.hasError('minlength')">
-            Please Enter at least 4 characters
-        </div>
-        <div class="invalid-feedback" *ngIf="registerForm.get('password')?.hasError('maxlength')">
-            Please Enter at most 8 characters
-        </div>
-    </div>
-    <div class="mb-3">
-        <input type="password"
-            [class.is-invalid]="registerForm.get('confirmPassword')?.errors && registerForm.get('confirmPassword')?.touched"
-            class="form-control"
-            formControlName="confirmPassword"
-            placeholder="Confirm Password"            
-        >
-        <div class="invalid-feedback" *ngIf="registerForm.get('confirmPassword')?.hasError('required')">
-            Please Enter Confirm Password
-        </div>
-        <div class="invalid-feedback" *ngIf="registerForm.get('confirmPassword')?.hasError('notMatching')">
-            Password and Confirm Password does not match
-        </div>
-        <div class="invalid-feedback" *ngIf="registerForm.get('confirmPassword')?.hasError('minlength')">
-            Please Enter at least 4 characters
-        </div>
-        <div class="invalid-feedback" *ngIf="registerForm.get('confirmPassword')?.hasError('maxlength')">
-            Please Enter at most 8 characters
-        </div>
-    </div>
+    
+    <app-text-input [formControl]="$any(registerForm.controls['username'])" 
+        [label]="'User Name'"></app-text-input>
+
+    <app-text-input [formControl]="$any(registerForm.controls['password'])" 
+        [label]="'Password'" [type]="'password'"></app-text-input>
+
+    <app-text-input [formControl]="$any(registerForm.controls['confirmPassword'])" 
+        [label]="'Confirm Password'" [type]="'password'"></app-text-input>
+    
     <div class="text-center">
         <button class="btn btn-success me-2" type="submit">Register</button>
         <button class="btn btn-danger" type="button" (click)="cancel()">Cancel</button>
