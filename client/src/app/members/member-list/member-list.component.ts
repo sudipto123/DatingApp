@@ -20,10 +20,10 @@ export class MemberListComponent implements OnInit {
 
   ngOnInit(): void {
     //this.members$ = this.memberService.getMembers();
-    this.localMembers();
+    this.loadMembers();
   }
 
-  localMembers(){
+  loadMembers(){
     this.memberService.getMembers(this.pageNumber, this.pageSize).subscribe({
       next: response => {
         if(response.result && response.pagination){
@@ -32,5 +32,12 @@ export class MemberListComponent implements OnInit {
         }
       }
     })
+  }
+
+  pageChanged(event: any){
+    if(this.pageNumber !== event.page){
+      this.pageNumber = event.page;
+      this.loadMembers();
+    }    
   }
 }
