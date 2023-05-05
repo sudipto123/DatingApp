@@ -52,6 +52,7 @@ export class MemberListComponent implements OnInit {
   resetFilters(){
     if(this.user){
       this.userParams = new UserParams(this.user);
+      this.userParams.minAge = 18;
       this.loadMembers();
     }
   }
