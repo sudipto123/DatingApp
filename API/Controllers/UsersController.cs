@@ -22,7 +22,7 @@ namespace API.Controllers
         public UsersController(IUserRepository userRepository, IMapper mapper, IPhotoService photoService)
         {
             _photoService = photoService;
-            _mapper = mapper;
+            _mapper = mapper;   
             _userRepository = userRepository;
         }
 
