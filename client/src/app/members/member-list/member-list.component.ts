@@ -18,6 +18,7 @@ export class MemberListComponent implements OnInit {
   pagination: Pagination | undefined;
   userParams: UserParams | undefined;
   genderList = [{value: 'male', display: 'Males'}, {value: 'female', display: 'Females'}]
+  resetFlag: boolean = false;
 
   constructor(private memberService: MembersService) {
     this.userParams = this.memberService.getUserParams();
@@ -35,6 +36,9 @@ export class MemberListComponent implements OnInit {
         this.userParams.maxAge = 99;
         this.userParams.minAge = 18;
       }
+      if(this.resetFlag === true && this.userParams.gender == null){
+        this.userParams.gender = 'male';
+      } 
       this.memberService.setUserParams(this.userParams);
 
       this.memberService.getMembers(this.userParams).subscribe({
@@ -49,6 +53,7 @@ export class MemberListComponent implements OnInit {
   }
 
   resetFilters(){
+    this.resetFlag = true;
     this.userParams = this.memberService.resetUserParams();
     this.loadMembers();
   }
