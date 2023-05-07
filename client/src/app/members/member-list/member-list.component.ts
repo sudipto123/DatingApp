@@ -30,6 +30,11 @@ export class MemberListComponent implements OnInit {
 
   loadMembers(){
     if(this.userParams) {
+      if(this.userParams.gender == null && this.userParams.maxAge == null && this.userParams.minAge == null && this.userParams.orderBy == null){
+        this.userParams.gender = 'male';
+        this.userParams.maxAge = 99;
+        this.userParams.minAge = 18;
+      }
       this.memberService.setUserParams(this.userParams);
 
       this.memberService.getMembers(this.userParams).subscribe({
