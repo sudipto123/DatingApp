@@ -35,10 +35,20 @@ export class MemberListComponent implements OnInit {
         this.userParams.gender = 'male';
         this.userParams.maxAge = 99;
         this.userParams.minAge = 18;
+        this.userParams.orderBy = 'lastActive';
       }
+
       if(this.resetFlag === true && this.userParams.gender == null){
         this.userParams.gender = 'male';
+        this.userParams.orderBy = 'lastActive';
       } 
+
+      if(this.resetFlag === true && this.userParams.minAge == null && this.userParams.maxAge == null && this.userParams.orderBy == null){
+        this.userParams.maxAge = 99;
+        this.userParams.minAge = 18;
+        this.userParams.orderBy = 'lastActive';
+      }
+
       this.memberService.setUserParams(this.userParams);
 
       this.memberService.getMembers(this.userParams).subscribe({
