@@ -31,22 +31,34 @@ export class MemberListComponent implements OnInit {
 
   loadMembers(){
     if(this.userParams) {
-      if(this.userParams.gender == null && this.userParams.maxAge == null && this.userParams.minAge == null && this.userParams.orderBy == null){
+      if(this.resetFlag === true &&  this.userParams.gender == null && this.userParams.maxAge == null && this.userParams.minAge == null && this.userParams.orderBy == null){
         this.userParams.gender = 'male';
         this.userParams.maxAge = 99;
         this.userParams.minAge = 18;
         this.userParams.orderBy = 'lastActive';
       }
 
-      if(this.resetFlag === true && this.userParams.gender == null){
+      else if(this.resetFlag === true && this.userParams.gender == null){
         this.userParams.gender = 'male';
         this.userParams.orderBy = 'lastActive';
       } 
 
-      if(this.resetFlag === true && this.userParams.minAge == null && this.userParams.maxAge == null && this.userParams.orderBy == null){
+      else if(this.resetFlag === true && this.userParams.minAge == null && this.userParams.maxAge == null && this.userParams.orderBy == null){
         this.userParams.maxAge = 99;
         this.userParams.minAge = 18;
         this.userParams.orderBy = 'lastActive';
+      }
+
+      else if(this.userParams.gender == null && this.userParams.minAge == null && this.userParams.maxAge == null && this.userParams.orderBy == null){
+        this.userParams.gender = 'male';
+        this.userParams.maxAge = 99;
+        this.userParams.minAge = 18;
+        this.userParams.orderBy = 'lastActive';
+      }
+
+      else if(this.userParams.minAge == null && this.userParams.maxAge == null){
+        this.userParams.maxAge = 99;
+        this.userParams.minAge = 18;
       }
 
       this.memberService.setUserParams(this.userParams);
