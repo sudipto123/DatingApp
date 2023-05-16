@@ -12,8 +12,11 @@ export class AdminService {
   constructor(private http: HttpClient) { }
 
   getUsersWithRoles(){
-    var users = this.http.get<User[]>(this.baseUrl + 'admin/users-with-roles');
-    console.log(users);
     return this.http.get<User[]>(this.baseUrl + 'admin/users-with-roles');
+  }
+
+  updateUserRoles(username: string, roles: string[]) {
+    return this.http.post<string[]>(this.baseUrl + 'admin/edit-roles/' 
+      + username + '?roles=' + roles, {});
   }
 }
