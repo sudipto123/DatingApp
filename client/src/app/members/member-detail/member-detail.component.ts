@@ -2,8 +2,11 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { NgxGalleryAnimation, NgxGalleryImage, NgxGalleryOptions } from '@kolkov/ngx-gallery';
 import { TabDirective, TabsetComponent } from 'ngx-bootstrap/tabs';
+import { take } from 'rxjs';
 import { Member } from 'src/app/_models/member';
 import { Message } from 'src/app/_models/message';
+import { User } from 'src/app/_models/user';
+import { AccountService } from 'src/app/_services/account.service';
 import { MembersService } from 'src/app/_services/members.service';
 import { MessageService } from 'src/app/_services/message.service';
 
@@ -20,12 +23,23 @@ export class MemberDetailComponent implements OnInit {
   galleryImages: NgxGalleryImage[] = [];
   activeTab?: TabDirective;
   messages: Message[] = [];
+  user: User | null = null;
 
-  constructor(private memberService: MembersService, private route: ActivatedRoute, private messageService: MessageService) { }
+  constructor(private memberService: MembersService, private route: ActivatedRoute, 
+      private messageService: MessageService, private accountService: AccountService) { 
+
+      this.accountService.currentUser$.pipe(take(1)).subscribe({
+        next: user => this.user = user
+      })
+      console.log('User Name:', this.user?.username);
+  }
 
   ngOnInit(): void {
     this.route.data.subscribe({
-      next: data => this.member = data['member'] 
+      next: data => {
+        this.member = data['member'],
+        console.log('Member from Member Edit Component: ', this.user);
+      }
     })
 
     this.route.queryParams.subscribe({
