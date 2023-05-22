@@ -9,6 +9,7 @@ import { User } from 'src/app/_models/user';
 import { AccountService } from 'src/app/_services/account.service';
 import { MembersService } from 'src/app/_services/members.service';
 import { MessageService } from 'src/app/_services/message.service';
+import { PresenceService } from 'src/app/_services/presence.service';
 
 @Component({
   selector: 'app-member-detail',
@@ -26,7 +27,8 @@ export class MemberDetailComponent implements OnInit {
   user: User | null = null;
 
   constructor(private memberService: MembersService, private route: ActivatedRoute, 
-      private messageService: MessageService, private accountService: AccountService) { 
+      private messageService: MessageService, private accountService: AccountService,
+      public presenceService: PresenceService) { 
 
       this.accountService.currentUser$.pipe(take(1)).subscribe({
         next: user => this.user = user
