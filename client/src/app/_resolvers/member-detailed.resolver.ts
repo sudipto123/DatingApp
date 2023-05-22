@@ -24,7 +24,7 @@ export class MemberDetailedResolver implements Resolve<Member> {
   resolve(route: ActivatedRouteSnapshot): Observable<Member> {
     var userName = this.user?.username.toString();
     console.log('From resolver: ', this.user?.username);
-    //return this.memberService.getMember(route.paramMap.get('username')!)
-    return this.memberService.getMember(userName!);
+    return this.memberService.getMember(route.paramMap.get('username')!)
+    //return this.memberService.getMember(userName!);
   }
 }
