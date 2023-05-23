@@ -48,7 +48,7 @@ export class AccountService {
   logout() {
     localStorage.removeItem('user');
     this.currentUserSource.next(null);
-    this.presenceService.stopHubConnection();
+    this.presenceService.stopHubConnection();    
   }
 
   getDecodedToken(token: string) {
