@@ -13,78 +13,45 @@ import { MembersService } from 'src/app/_services/members.service';
   styleUrls: ['./member-list.component.css']
 })
 export class MemberListComponent implements OnInit {
-  //members$: Observable<Member[]> | undefined;
+  // members$: Observable<Member[]> | undefined;
   members: Member[] = [];
   pagination: Pagination | undefined;
   userParams: UserParams | undefined;
-  genderList = [{value: 'male', display: 'Males'}, {value: 'female', display: 'Females'}]
-  resetFlag: boolean = false;
+  genderList = [{ value: 'male', display: 'Males' }, { value: 'female', display: 'Females' }]
 
   constructor(private memberService: MembersService) {
     this.userParams = this.memberService.getUserParams();
   }
 
   ngOnInit(): void {
-    //this.members$ = this.memberService.getMembers();
+    // this.members$ = this.memberService.getMembers();
     this.loadMembers();
   }
 
-  loadMembers(){
-    if(this.userParams) {
-      if(this.resetFlag === true &&  this.userParams.gender == null && this.userParams.maxAge == null && this.userParams.minAge == null && this.userParams.orderBy == null){
-        this.userParams.gender = 'male';
-        this.userParams.maxAge = 99;
-        this.userParams.minAge = 18;
-        this.userParams.orderBy = 'lastActive';
-      }
-
-      else if(this.resetFlag === true && this.userParams.gender == null){
-        this.userParams.gender = 'male';
-        this.userParams.orderBy = 'lastActive';
-      } 
-
-      else if(this.resetFlag === true && this.userParams.minAge == null && this.userParams.maxAge == null && this.userParams.orderBy == null){
-        this.userParams.maxAge = 99;
-        this.userParams.minAge = 18;
-        this.userParams.orderBy = 'lastActive';
-      }
-
-      else if(this.userParams.gender == null && this.userParams.minAge == null && this.userParams.maxAge == null && this.userParams.orderBy == null){
-        this.userParams.gender = 'male';
-        this.userParams.maxAge = 99;
-        this.userParams.minAge = 18;
-        this.userParams.orderBy = 'lastActive';
-      }
-
-      else if(this.userParams.minAge == null && this.userParams.maxAge == null){
-        this.userParams.maxAge = 99;
-        this.userParams.minAge = 18;
-      }
-
+  loadMembers() {
+    if (this.userParams) {
       this.memberService.setUserParams(this.userParams);
-
       this.memberService.getMembers(this.userParams).subscribe({
         next: response => {
-          if(response.result && response.pagination){
+          if (response.result && response.pagination) {
             this.members = response.result;
             this.pagination = response.pagination;
           }
         }
       })
-    }    
+    }
   }
 
-  resetFilters(){
-    this.resetFlag = true;
+  resetFilters() {
     this.userParams = this.memberService.resetUserParams();
     this.loadMembers();
   }
 
-  pageChanged(event: any){
-    if(this.userParams && this.userParams?.pageNumber !== event.page){
+  pageChanged(event: any) {
+    if (this.userParams && this.userParams?.pageNumber !== event.page) {
       this.userParams.pageNumber = event.page;
       this.memberService.setUserParams(this.userParams);
       this.loadMembers();
-    }    
+    }
   }
 }

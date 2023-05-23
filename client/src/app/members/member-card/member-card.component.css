@@ -16,7 +16,7 @@
     position: relative;
 }
 
-.member-icons{
+.member-icons {
     position: absolute;
     bottom: -30%;
     left: 0;
@@ -35,12 +35,12 @@
     transition: all 0.3s ease-in-out;
 }
 
-@keyframes fa-blink{
+@keyframes fa-blink {
     0% {opacity: 1;}
     100% {opacity: 0.4;}
 }
 
-.is-online{
+.is-online {
     animation: fa-blink 1.5s linear infinite;
     color: rgb(1, 189, 42);
 }

@@ -6,7 +6,7 @@ import {
   HttpInterceptor,
   HttpErrorResponse
 } from '@angular/common/http';
-import { Observable, catchError } from 'rxjs';
+import { catchError, Observable } from 'rxjs';
 import { NavigationExtras, Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 
@@ -18,19 +18,19 @@ export class ErrorInterceptor implements HttpInterceptor {
   intercept(request: HttpRequest<unknown>, next: HttpHandler): Observable<HttpEvent<unknown>> {
     return next.handle(request).pipe(
       catchError((error: HttpErrorResponse) => {
-        if(error){
-          switch (error.status){
+        if (error) {
+          switch (error.status) {
             case 400:
-              if(error.error.errors){
-                const modalStateErrors = [];
-                for(const key in error.error.errors){
-                  if(error.error.errors[key]){
-                    modalStateErrors.push(error.error.errors[key]);
+              if (error.error.errors) {
+                const modelStateErrors = [];
+                for (const key in error.error.errors) {
+                  if (error.error.errors[key]) {
+                    modelStateErrors.push(error.error.errors[key])
                   }
                 }
-                throw modalStateErrors.flat();
+                throw modelStateErrors.flat();
               } else {
-                this.toastr.error(error.error, error.status.toString());
+                this.toastr.error(error.error, error.status.toString())
               }
               break;
             case 401:
@@ -40,11 +40,11 @@ export class ErrorInterceptor implements HttpInterceptor {
               this.router.navigateByUrl('/not-found');
               break;
             case 500:
-              const navigationExtras: NavigationExtras = { state: { error: error.error } };
+              const navigationExtras: NavigationExtras = {state: {error: error.error}};
               this.router.navigateByUrl('/server-error', navigationExtras);
               break;
             default:
-              this.toastr.error('Something unexpected went Wrong');
+              this.toastr.error('Something unexpected went wrong');
               console.log(error);
               break;
           }

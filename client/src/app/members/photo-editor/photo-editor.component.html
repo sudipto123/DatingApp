@@ -1,6 +1,6 @@
 <div class="row mb-3" *ngIf="member">
     <div class="col-2 mb-1" *ngFor="let photo of member.photos">
-        <img src="{{photo.url}}" alt="Photo of User" class="img-thumbnail mb-1">
+        <img src="{{photo.url}}" alt="photo of user" class="img-thumbnail mb-1">
         <div class="text-center">
             <button 
                 class="btn btn-sm"
@@ -19,7 +19,7 @@
 
 <div class="row">
  
-    <div class="col-md-3">
+    <div class="col-3">
 
         <h3>Add Photos</h3>
 
@@ -32,12 +32,11 @@
             Drop photos here
         </div>
 
-
         Multiple
-        <input type="file" ng2FileSelect [uploader]="uploader" multiple/><br/>
+        <input type="file" ng2FileSelect [uploader]="uploader" multiple  /><br/>
 
         Single
-        <input type="file" ng2FileSelect [uploader]="uploader"/>
+        <input type="file" ng2FileSelect [uploader]="uploader" />
     </div>
 
     <div class="col-9" style="margin-bottom: 40px" *ngIf="uploader?.queue?.length">

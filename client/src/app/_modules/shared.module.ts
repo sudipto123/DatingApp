@@ -22,8 +22,8 @@ import { ModalModule } from 'ngx-bootstrap/modal';
       positionClass: 'toast-bottom-right'
     }),
     NgxGalleryModule,
-    NgxSpinnerModule.forRoot({ 
-      type: 'line-scale-party' 
+    NgxSpinnerModule.forRoot({
+      type: 'line-scale-party'
     }),
     FileUploadModule,
     BsDatepickerModule.forRoot(),
