@@ -7,8 +7,8 @@ namespace API.SiignalR
     [Authorize]
     public class PresenceHub : Hub
     {
-        private readonly PrsenceTracker _tracker;
-        public PresenceHub(PrsenceTracker tracker)
+        private readonly PresenceTracker _tracker;
+        public PresenceHub(PresenceTracker tracker)
         {
             _tracker = tracker;
         }

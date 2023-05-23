@@ -1,6 +1,6 @@
 namespace API.SiignalR
 {
-    public class PrsenceTracker
+    public class PresenceTracker
     {
         private static readonly Dictionary<string, List<string>> OnlineUsers = new Dictionary<string, List<string>>();
 
