@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "T6EYnhFco27iFNcDLe3MfVGSsKjgW/HdkHPmbsi8l4g=",
+  "Hash": "tSXyuWvEgOMOfBAO1bO+L8PPZcI/bw695idrq/tn3hw=",
   "Source": "API",
   "BasePath": "_content/API",
   "Mode": "Default",
@@ -170,12 +170,12 @@
       "OriginalItemSpec": "wwwroot\\index.html"
     },
     {
-      "Identity": "E:\\Projects\\Udemy\\DatingApp\\API\\wwwroot\\main.54256713ef7e85d1.js",
+      "Identity": "E:\\Projects\\Udemy\\DatingApp\\API\\wwwroot\\main.93b27900f40726c7.js",
       "SourceId": "API",
       "SourceType": "Discovered",
       "ContentRoot": "E:\\Projects\\Udemy\\DatingApp\\API\\wwwroot\\",
       "BasePath": "_content/API",
-      "RelativePath": "main.54256713ef7e85d1.js",
+      "RelativePath": "main.93b27900f40726c7.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -184,7 +184,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\main.54256713ef7e85d1.js"
+      "OriginalItemSpec": "wwwroot\\main.93b27900f40726c7.js"
     },
     {
       "Identity": "E:\\Projects\\Udemy\\DatingApp\\API\\wwwroot\\polyfills.319b8929a90ccf51.js",
